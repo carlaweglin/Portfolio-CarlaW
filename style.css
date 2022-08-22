@@ -10,6 +10,11 @@
 header nav {
   border-color: white;
   box-shadow: 0 0 15px 0 rgb(212, 209, 209);
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  background-color: aliceblue;
 }
 
 .menu-container {
@@ -388,7 +393,8 @@ footer {
   margin-bottom: 30px;
 }
 
-footer nav ul li a , .rrss-container a {
+footer nav ul li a,
+.rrss-container a {
   text-decoration: none;
   color: white;
 }
