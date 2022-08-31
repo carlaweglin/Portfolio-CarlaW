@@ -19,7 +19,7 @@ header nav {
 
 .menu-container {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   flex-wrap: wrap;
   padding: 20px;
   margin-left: 400px;
@@ -30,10 +30,16 @@ header nav {
   display: flex;
   align-items: center;
   list-style: none;
-  padding: 15px;
+  padding: 10px;
   font-size: 18px;
   color: gray;
   cursor: pointer;
+  transition: 0.3s ease all;
+  margin: 0;
+}
+
+.menu-container li a:hover {
+  color: rgb(71, 179, 252);
 }
 
 /*Fin Menu principal de navegacion*/
@@ -47,26 +53,29 @@ h1 {
 
 #hola {
   display: flex;
-  justify-content: space-around;
 
-  margin-left: 400px;
-  margin-right: 400px;
-  padding-top: 200px;
-  padding-bottom: 200px;
+  min-height: 100vh;
+  padding: 200px 200px;
 }
 
 #hola .div-descripcion {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
-
+  align-items: center;
   width: 50%;
 }
 
 #hola .img-descripcion {
   width: 50%;
-  padding: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+#hola .img-descripcion img {
+  min-width: 250px;
+  max-width: 500px;
+  min-height: 250px;
 }
 
 .div-descripcion .text-hola {
@@ -131,39 +140,51 @@ div.div-descripcion .button-2 a {
 
 h2 {
   font-size: 50px;
+  margin-bottom: 50px;
+  
 }
 
 .intro-habilidades p {
   font-size: 20px;
-  width: 800px;
   color: gray;
+  width: 100%;
 }
 
 #habilidades {
   background-color: aliceblue;
   text-align: center;
-  height: 900px;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 #habilidades .intro-habilidades {
-  height: 200px;
+  min-height: 150px;
   padding: 70px;
+  margin-bottom: 50px;
+  margin-top: 70px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
 
 .descrip-habilidades {
   display: flex;
   justify-content: center;
   justify-content: space-evenly;
-  width: 900px;
-  flex-wrap: wrap;
+  flex-direction: column;
+  margin-bottom: 50px;
+}
+
+.descrip-habilidades div {
+  display: flex;
 }
 
 .descrip-habilidades figure {
-  height: 250px;
-  width: 250px;
+  min-height: 250px;
+  min-width: 250px;
   padding: 20px;
   border-radius: 5%;
   border: 1px solid lightgrey;
@@ -180,7 +201,8 @@ h2 {
 }
 
 .descrip-habilidades figure img {
-  width: 80px;
+  min-width: 80px;
+  max-width: 90px;
   margin-bottom: 30px;
 }
 
@@ -195,9 +217,9 @@ h2 {
 .cita {
   background-color: rgb(71, 179, 252);
   color: aliceblue;
-  height: 350px;
+  min-height: 350px;
   text-align: center;
-  padding: 50px 0 100px 0;
+  padding: 50px 20px 100px 20px;
 }
 
 .cita h3 {
@@ -222,19 +244,23 @@ h2 {
   display: flex;
   flex-direction: column;
   align-items: center;
+  min-height: 100vh;
 }
 
 .intro-proyects {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 200px;
-  width: 900px;
+  min-height: 200px;
+  width: 100%;
+  margin-bottom: 100px;
+  margin-top: 70px;
 }
 
 .intro-proyects h2 {
   font-size: 50px;
   margin-top: 50px;
+  font-weight: bold;
 }
 
 .intro-proyects p {
@@ -247,13 +273,14 @@ h2 {
 .list-proyects {
   display: flex;
   flex-wrap: wrap;
-  width: 1200px;
-  height: 1100px;
+  max-width: 1200px;
+  min-height: 1100px;
   justify-content: space-evenly;
   padding: 10px;
 }
 
-.list-proyects figure {
+.list-proyects figure,
+.list-proyects a {
   border-radius: 5%;
   border: 1px solid lightgrey;
   margin: 15px;
@@ -265,13 +292,19 @@ h2 {
   align-items: center;
 }
 
-.list-proyects figure img {
+.list-proyects figure img,
+.list-proyects a img {
   width: 250px;
   height: 250px;
 }
 
-.list-proyects figure:hover {
+.list-proyects a:hover {
   border: 2px solid rgb(71, 179, 252);
+}
+
+#proyects div.list-proyects a {
+  text-decoration: none;
+  color: black;
 }
 
 /*fin Mis proyectos*/
@@ -280,21 +313,12 @@ h2 {
 
 #contact {
   background-color: aliceblue;
-  height: 1200px;
-  padding-top: 100px;
-}
-
-.contact-container {
-  background-color: white;
-  width: 1200px;
-  height: 800px;
-  margin: auto;
-
+  min-height: 100vh;
+  padding: 100px 100px;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
-  border-radius: 20px;
-  border: 1px solid lightgray;
+  flex-wrap: wrap;
 }
 
 .contactame,
@@ -302,10 +326,12 @@ h2 {
   width: 500px;
   height: 600px;
   padding: 100px;
+
   display: flex;
   flex-direction: column;
   border-radius: 10px;
   border: 1px solid lightgray;
+  background-color: white;
 }
 
 .contactame:hover {
@@ -368,6 +394,7 @@ h2 {
   background-color: rgb(71, 179, 252);
   cursor: pointer;
 }
+
 .item-boton:hover {
   background-color: lightgray;
 }
@@ -378,12 +405,12 @@ footer {
   background-color: rgb(71, 179, 252);
   color: white;
   text-align: center;
-  height: 300px;
-  padding-top: 50px;
+  min-height: 300px;
+  padding: 50px;
 }
 
 .listfooter-container {
-  width: 400px;
+  max-width: 400px;
   display: flex;
   justify-content: center;
   justify-content: space-around;
@@ -409,12 +436,13 @@ footer nav ul li a,
   align-items: center;
   justify-content: center;
 }
+
 .rrss-container {
   display: flex;
   justify-content: center;
   justify-content: space-around;
 
-  width: 400px;
+  max-width: 400px;
   margin: auto;
   margin-bottom: 30px;
 }
@@ -423,4 +451,78 @@ footer nav ul li a,
   background-color: white;
   color: rgb(71, 179, 252);
   cursor: pointer;
+}
+
+/*fin footer*/
+
+/*responsive desing*/
+
+@media screen and (max-width: 1365px) {
+  header {
+    display: none;
+  }
+
+  #hola {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 0;
+  }
+
+  #hola div {
+    max-width: 40%;
+  }
+}
+
+@media screen and (max-width: 1210px) {
+  #contact {
+    background-color: white;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0;
+    margin-top: 50px;
+  }
+
+  .contactame,
+  .form-escribime {
+    border: 0;
+    width: 100%;
+    height: 50%;
+    padding: 20px;
+  }
+}
+
+@media screen and (max-width: 880px) {
+  .contactame,
+  .form-escribime {
+    margin-bottom: 20px;
+  }
+  .descrip-habilidades {
+    flex-direction: column;
+  }
+
+  .descrip-habilidades div {
+    flex-direction: column;
+  }
+
+  footer .listfooter-container {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  footer nav ul li a {
+    font-size: 15px;
+  }
+
+  footer nav ul li {
+    margin-bottom: 8px;
+  }
+}
+
+@media screen and (max-width: 490px) {
+  h2, .intro-proyects h2 {
+    font-size: 35px;
+  }
 }
