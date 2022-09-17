@@ -111,10 +111,7 @@
                     <img src="imagenes/icono-portfolio.svg" alt="icono del portafolio">
                     <figcaption>Portfolio</figcaption>
                 </a>
-                <a href="cv/index.html" target="_blank">
-                    <img src="imagenes/undraw_online_cv_re_gn0a.svg" alt="icono cv">
-                    <figcaption>Mi CV</figcaption>
-                </a>
+                
                 <a href="#">
                     <img src="imagenes/icono-generadormemes.svg" alt="imagen generador de memes">
                     <figcaption>Generador de memes</figcaption>
@@ -150,7 +147,7 @@
         <section id="contact">
 
             <div class="contactame">
-                <h2><b>Contactame</b></h2>
+                <h2>Contactame</h2>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
                 <ul>
                     <li><i class="fa-brands fa-twitter"></i> <a href="https://twitter.com/?lang=es"
@@ -164,16 +161,19 @@
                 </ul>
             </div>
             <div class="form-escribime">
-                <h2><b>Escribime</b></h2>
-                <p>Nombre</p>
-                <input class="item-datos" type="text" placeholder="Ingresa tu nombre">
-                <p>Apellido</p>
-                <input class="item-datos" type="text" placeholder="Ingresa tu apellido">
-                <p>Correo electronico</p>
-                <input class="item-datos" type="email" placeholder="Ingresa tu correo electronico">
-                <p>Mensaje</p>
-                <input class="item-datos" type="text" placeholder="Escribe tu mensaje"> <br>
-                <input class="item-boton" type="submit" value="Enviar">
+                <h2>Escribime</h2>
+                <form action="">
+                    <label for="iname">Nombre</label>
+                    <input id="iname" class="item-datos" type="text" placeholder="Ingresa tu nombre" name="name">
+                    <label for="isurname">Apellido</label>
+                    <input id="isurname" class="item-datos" type="text" placeholder="Ingresa tu apellido" name="surname">
+                    <label for="iemail">Correo electrónico</label>
+                    <input id="iemail" class="item-datos" type="email" placeholder="Ingresa tu correo electrónico" name="email">
+                    <label for="imsj">Mensaje</label>
+                    <textarea class="item-datos" name="message" id="imsj" placeholder="Escribe tu mensaje"></textarea>
+                    
+                    <input class="item-boton" type="submit" value="Enviar">
+                </form>
             </div>
 
         </section>

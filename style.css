@@ -5,6 +5,10 @@
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
+:root {
+  --colorPrincipal: rgb(71, 179, 252);
+}
+
 /*Menu principal de navegacion*/
 
 header nav {
@@ -39,7 +43,7 @@ header nav {
 }
 
 .menu-container li a:hover {
-  color: rgb(71, 179, 252);
+  color: var(--colorPrincipal);
 }
 
 /*Fin Menu principal de navegacion*/
@@ -48,7 +52,11 @@ header nav {
 
 h1 {
   font-size: 80px;
-  color: rgb(71, 179, 252);
+}
+
+h1, h2 {
+  color: var(--colorPrincipal);
+  text-shadow: 8px 4px 6px rgb(187, 214, 236);
 }
 
 #hola {
@@ -115,7 +123,7 @@ div.div-descripcion .button-2 a {
   width: 150px;
   height: 40px;
   border: none;
-  background-color: rgb(71, 179, 252);
+  background-color: var(--colorPrincipal);
   font-size: 18px;
   color: black;
   cursor: pointer;
@@ -141,7 +149,6 @@ div.div-descripcion .button-2 a {
 h2 {
   font-size: 50px;
   margin-bottom: 50px;
-  
 }
 
 .intro-habilidades p {
@@ -197,7 +204,7 @@ h2 {
 }
 
 .descrip-habilidades figure:hover {
-  border: 2px solid rgb(71, 179, 252);
+  border: 2px solid var(--colorPrincipal);
 }
 
 .descrip-habilidades figure img {
@@ -215,7 +222,7 @@ h2 {
 /*cita*/
 
 .cita {
-  background-color: rgb(71, 179, 252);
+  background-color: var(--colorPrincipal);
   color: aliceblue;
   min-height: 350px;
   text-align: center;
@@ -299,7 +306,7 @@ h2 {
 }
 
 .list-proyects a:hover {
-  border: 2px solid rgb(71, 179, 252);
+  border: 2px solid var(--colorPrincipal);
 }
 
 #proyects div.list-proyects a {
@@ -335,16 +342,18 @@ h2 {
 }
 
 .contactame:hover {
-  border: 1px solid rgb(71, 179, 252);
+  border: 2px solid var(--colorPrincipal);
 }
 
 .form-escribime:hover {
-  border: 1px solid rgb(71, 179, 252);
+  border: 2px solid var(--colorPrincipal);
 }
 
 .contactame h2,
 .form-escribime h2 {
   margin-bottom: 30px;
+  font-weight: bold;
+  
 }
 
 .contactame p {
@@ -355,19 +364,21 @@ h2 {
   list-style: none;
   color: black;
   margin-bottom: 15px;
+  font-size: 1.2rem;
 }
 
 .contactame ul li:hover {
-  color: rgb(71, 179, 252);
+  color: var(--colorPrincipal);
 }
 
 .contactame ul li a {
   text-decoration: none;
+  color: rgb(83, 83, 83);
 }
 
 .contactame ul li a:hover {
-  color: rgb(71, 179, 252);
-  text-decoration: underline;
+  color: var(--colorPrincipal);
+  
 }
 
 .form-escribime input {
@@ -376,33 +387,53 @@ h2 {
   margin-bottom: 10px;
   border-radius: 10px;
   border: 1px solid lightgray;
+  width: 100%;
+  
 }
 
-.form-escribime p {
+div.form-escribime form textarea {
+  max-width: 100%;
+  min-width: 100%;
+  min-height: 70px;
+  max-height: 70px;
+  border-radius: 10px;
+  padding: 8px;
+  border: 1px solid lightgray;
+}
+
+.form-escribime label {
   margin-bottom: 5px;
   text-transform: uppercase;
   font-weight: bold;
+  display: block;
+  
 }
 
 .item-datos:hover {
-  border: 1px solid rgb(71, 179, 252);
+  border: 1px solid var(--colorPrincipal);
+  
 }
 
-.item-boton {
+input.item-boton {
   font-size: 120%;
   color: white;
-  background-color: rgb(71, 179, 252);
+  background-color: var(--colorPrincipal);
   cursor: pointer;
+  display: block;
+  margin-top: 15px;
+  width: 70%;
 }
 
 .item-boton:hover {
   background-color: lightgray;
 }
 
+/*fin contacto*/
+
 /*footer*/
 
 footer {
-  background-color: rgb(71, 179, 252);
+  background-color: var(--colorPrincipal);
   color: white;
   text-align: center;
   min-height: 300px;
@@ -472,7 +503,10 @@ footer nav ul li a,
 
   #hola div {
     max-width: 40%;
+    margin: 30px 0;
   }
+
+  
 }
 
 @media screen and (max-width: 1210px) {
@@ -497,6 +531,15 @@ footer nav ul li a,
   .contactame,
   .form-escribime {
     margin-bottom: 20px;
+    border: none;
+  }
+
+  .form-escribime:hover {
+    border: 0;
+  }
+
+  .contactame:hover {
+    border: 0;
   }
   .descrip-habilidades {
     flex-direction: column;
@@ -522,7 +565,10 @@ footer nav ul li a,
 }
 
 @media screen and (max-width: 490px) {
-  h2, .intro-proyects h2 {
+  h2,
+  .intro-proyects h2 {
     font-size: 35px;
   }
 }
+
+/*fin responsive desing*/
